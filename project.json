@@ -1,0 +1,68 @@
+{
+  "name": "AutomationToBeTested",
+  "description": "A windows legacy automation used for defining the use-case for Test Activity in UiPath.Pipelines.Activities package",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.15.0-alpha.2975664]",
+    "UiPath.Mail.Activities": "[1.18.0-alpha.2960579]",
+    "UiPath.System.Activities": "[22.10.0-beta.2977313]",
+    "UiPath.Testing.Activities": "[22.10.0-beta.2989559]",
+    "UiPath.UIAutomation.Activities": "[22.10.0-beta.2989292]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "22.10.0.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "3579ce11-7c22-412f-974e-f35f63c3e8d1",
+        "testCaseType": "TestCase",
+        "executionTemplateType": 1,
+        "fileName": "TestForShowUp.xaml"
+      }
+    ],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "CSharp",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "2c9b7dac-79f2-4b71-86de-d40680dc2d29",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}
