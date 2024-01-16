@@ -16,7 +16,7 @@ steps:
 - task: UiPathPack-preview@4
   inputs:
     versionType: 'AutoVersion'
-    projectJsonPath: 'GetTheWinner/project.json'
+    projectJsonPath: 'GetListings/project.json'
     splitOutput: true
     enablePackageMetadata: true
     repositoryUrl: 'https://github.com/redfoxalpha/public-automations/blob/$(Build.SourceBranchName)/GetListings/project.json'
