@@ -1,0 +1,33 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: UiPathInstallPlatform-preview@4
+  inputs:
+    cliVersion: 'X_23.10.8753.32995'
+- task: UiPathPack-preview@4
+  inputs:
+    versionType: 'AutoVersion'
+    projectJsonPath: 'GetTheWinner/project.json'
+    splitOutput: true
+    enablePackageMetadata: true
+    repositoryUrl: 'https://github.com/redfoxalpha/public-automations/blob/$(Build.SourceBranchName)/GetListings/project.json'
+    repositoryCommit: '$(Build.SourceVersion)'
+    repositoryBranch: '$(Build.SourceBranchName)'
+    repositoryType: 'git'
+    outputPath: '$(Build.ArtifactStagingDirectory)/Output'
+    traceLevel: 'Information'
+- task: UiPathDeploy-preview@4
+  inputs:
+    orchestratorConnection: 'Preview to redfoxalpha DefaultTenant'
+    packagesPath: '$(Build.ArtifactStagingDirectory)/Output'
+    folderName: 'QA'
+    traceLevel: 'Information'
